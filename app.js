@@ -27,7 +27,7 @@ function getConvertList(arrayRates,unit,rate,number){
 			var node = document.createElement("LI");
 			var value = (number*(arrayRates[i].rate))/rate;
 			value = value.toFixed(3);
-			var rateDiff = (arrayRates[i].rate - rate)/(rate);
+			var rateDiff = (rate - arrayRates[i].rate)/(rate);
 			rateDiff = rateDiff.toFixed(2);
 			var span1 = document.createElement('span');
 			span1.setAttribute('class','money-value');
