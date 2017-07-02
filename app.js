@@ -21,13 +21,26 @@ function getDropDown(arrayRates){
 	}
 }
 
-function getConvertList(arrayRates,unit,value,number){
+function getConvertList(arrayRates,unit,rate,number){
 	for (var i = 0 ; i < arrayRates.length ; i++) {
 		if(unit !== arrayRates[i].unit){
 			var node = document.createElement("LI");
-			var value = (number*(arrayRates[i].rate))/value;
-			var textnode = document.createTextNode(arrayRates[i].unit+" : "+value);
-			node.appendChild(textnode);
+			var value = (number*(arrayRates[i].rate))/rate;
+			value = value.toFixed(3);
+			var rateDiff = (arrayRates[i].rate - rate)/(rate);
+			rateDiff = rateDiff.toFixed(2);
+			var span1 = document.createElement('span');
+			span1.setAttribute('class','money-value');
+			node.appendChild(span1);
+			span1.innerHTML = value;
+			var span2 = document.createElement('span');
+			span2.setAttribute('class','unit-value');
+			node.appendChild(span2);
+			span2.innerHTML = arrayRates[i].unit;
+			var span3 = document.createElement('span');
+			span3.setAttribute('class','diff-value');
+			node.appendChild(span3);
+			span3.innerHTML = rateDiff+"%";
 			document.getElementById("myList").appendChild(node);	
 		}
 	}	

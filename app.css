@@ -1,0 +1,57 @@
+.container{
+	padding:2%;
+	margin:2%;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	border: solid 1px #e72e77;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    background-color: #fbfbfb;
+    border-radius: 4px;
+    box-shadow: 0px 5px 10px #888888;
+    font-size: 18px;
+    line-height: 2.5;
+    display: inline-block;
+    width: 46%;
+}    
+.input-box{
+	display: inline-block;
+	text-align: center;
+	border: solid 2px #093406;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 22px;
+    margin: 5px;
+    box-shadow: 0px 5px 10px #4a4a4a;
+}
+.drop-down{
+	display: inline-block;
+}
+.wrapper{
+	text-align: center;
+}
+.currency-drop{
+	text-align: center;
+    border: solid 2px #093406;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 22px;
+    margin: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px #4a4a4a;
+}
+.money-value{
+	float: left;
+	margin-right: 10px;
+}
+.unit-value{
+	float:left;
+	font-weight:600;
+}
+.diff-value{
+	float:right;
+}
