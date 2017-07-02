@@ -6,16 +6,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <input type="number" id="myNumber" value="100">
-        <div class="drop-down">
-            <select name="currency" id="currencyList" onchange="myFunction(this)">
-            </select>
-        </div>
-        <ul id="myList">
-        </ul>
+    <input type="number" id="myNumber" value="100" onchange="numberChange()">
+    <div class="drop-down">
+        <select name="currency" id="currencyList" onchange="unitChange(this)">
+        </select>
+    </div>
+    <ul id="myList">
+    </ul>
 </body>
-<script src="angular.min.js"></script>
 <script src="app.js"></script>
-
 </html>
